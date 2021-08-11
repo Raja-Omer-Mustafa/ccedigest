@@ -2,31 +2,74 @@
 <html>
   <head>
     <title>Debugging</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <!-- ======= Header ======= -->
+    <header id="header">
+      <div
+        class="container-fluid d-flex justify-content-between align-items-center"
+      >
+        <h1 class="logo me-auto me-lg-0"><a href="index.html">cceDigest</a></h1>
+        <nav id="navbar" class="navbar order-last order-lg-0 ms-1">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Advertise with us.html">Advertise with us</a></li>
+            <li><a href="archives.html">Archives</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
 
-    <style type="text/css">
-      body {
-        background-color: #333;
-        margin: 0;
-        padding: 0;
-      }
-      .container {
-        height: 95vh;
-        width: 95%;
-        margin: 20px auto;
-        /*border: 2px solid red;*/
-        /*box-shadow: 0 0 5px red;*/
-      }
-      .fullscreen {
-        background-color: #333;
-      }
-    </style>
-
-    <div class="container" id="container">
-
-    </div>
+        <div class="header-social-links">
+          <a href="https://twitter.com/CEconomicDigest" class="twitter">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="https://www.facebook.com/ccedigest" class="facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+    <div class="flip-book" id="container"></div>
+    <footer id="footer">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright
+          <strong><span>2021</span></strong>
+          . All Rights Reserved
+        </div>
+      </div>
+    </footer>
 
     <script src="js/libs/jquery.min.js"></script>
     <script src="js/libs/html2canvas.min.js"></script>
@@ -76,9 +119,11 @@
         '38': 'public/books/image/theKingIsBlack/38.jpg',
         '39': 'public/books/image/theKingIsBlack/39.jpg',
         '40': 'public/books/image/theKingIsBlack/40.jpg',
-        '41': 'https://drive.google.com/uc?export=view&id=1BW0gUspYPfbrn6Yw7nWWKIQ3xWpLze4V',
-        '42': 'https://drive.google.com/uc?export=view&id=1ic8uhuzLkDzVHjq-mdDojh0VqCQeecjI'
-      };
+        '41':
+          'https://drive.google.com/uc?export=view&id=1BW0gUspYPfbrn6Yw7nWWKIQ3xWpLze4V',
+        '42':
+          'https://drive.google.com/uc?export=view&id=1ic8uhuzLkDzVHjq-mdDojh0VqCQeecjI',
+      }
       // // Sample 0 {
       // $('#container').FlipBook({
       //   pdf: 'public/books/pdf/FoxitPdfSdk.pdf',
@@ -102,36 +147,34 @@
       function theKingIsBlackPageCallback(n) {
         return {
           type: 'image',
-          src: images[n+1],
-          interactive: true
-        };
+          src: images[n + 1],
+          interactive: true,
+        }
       }
 
       $('#container').FlipBook({
         pageCallback: theKingIsBlackPageCallback,
         pages: 42,
-        propertiesCallback: function(props) {
-          props.cover.color = 0x000000;
-          return props;
+        propertiesCallback: function (props) {
+          props.cover.color = 0x000000
+          return props
         },
         template: {
           html: 'templates/default-book-view.html',
-          styles: [
-            'css/short-white-book-view.css'
-          ],
+          styles: ['css/short-white-book-view.css'],
           links: [
             {
               rel: 'stylesheet',
-              href: 'css/font-awesome.min.css'
-            }
+              href: 'css/font-awesome.min.css',
+            },
           ],
           script: 'js/default-book-view.js',
           sounds: {
             startFlip: 'sounds/start-flip.mp3',
-            endFlip: 'sounds/end-flip.mp3'
-          }
-        }
-      });
+            endFlip: 'sounds/end-flip.mp3',
+          },
+        },
+      })
       // }
 
       // // Sample 2 {
@@ -209,8 +252,7 @@
       //   }
       // });
       // // }
-
     </script>
-
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
