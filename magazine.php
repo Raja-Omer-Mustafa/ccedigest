@@ -1,5 +1,5 @@
 <?php
-  require 'include\config.php';
+  require 'include/config.php';
   $id = $_GET["id"];
   $magazines = [
     '1' => [
