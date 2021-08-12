@@ -1,3 +1,59 @@
+<?php
+  require 'include\config.php';
+  $id = $_GET["id"];
+  $magazines = [
+    '1' => [
+      'name' => '01-Feb-2015',
+      'pages' => '99'
+    ],
+    '2' => [
+      'name' => '01-March-2015',
+      'pages' => '119'
+    ],
+    '3' => [
+      'name' => '03-Aug-2014',
+      'pages' => '120'
+    ],
+    '4' => [
+      'name' => '03-May-2015',
+      'pages' => '119'
+    ],
+    '5' => [
+      'name' => '04-Jan-2015',
+      'pages' => '150'
+    ],
+    '6' => [
+      'name' => '04-May-2014',
+      'pages' => '130'
+    ],
+    '7' => [
+      'name' => '05-April-2015',
+      'pages' => '150'
+    ],
+    '8' => [
+      'name' => '05-Oct-2014',
+      'pages' => '150'
+    ],
+    '9' => [
+      'name' => '06-April-2014',
+      'pages' => '106'
+    ],
+    '10' => [
+      'name' => '07-Sept-2014',
+      'pages' => '149'
+    ],
+    '11' => [
+      'name' => '08-Feb-2015',
+      'pages' => '130'
+    ],
+    '12' => [
+      'name' => '08-March-2015',
+      'pages' => '120'
+    ]
+  ];
+  $magazine = $magazines[$id];
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -50,6 +106,9 @@
 
     <script src="js/dist/3dflipbook.js"></script>
     <script type="text/javascript">
+      var magazine = JSON.parse('<?= json_encode($magazine) ?>');
+      var baseurl = '<?= $baseurl ?>';
+      console.log(`${baseurl}${magazine.name}/${magazine.name} (1).jpg`);
       var images = {
         '1': 'public/books/image/theKingIsBlack/1.jpg',
         '2': 'public/books/image/theKingIsBlack/2.jpg',
@@ -119,14 +178,14 @@
       function theKingIsBlackPageCallback(n) {
         return {
           type: 'image',
-          src: images[n + 1],
+          src: `${baseurl}${magazine.name}/${magazine.name} (${n + 1}).jpg`, // images[n + 1]
           interactive: true,
         }
       }
 
       $('#container').FlipBook({
         pageCallback: theKingIsBlackPageCallback,
-        pages: 42,
+        pages: magazine.pages,
         propertiesCallback: function (props) {
           props.cover.color = 0x000000
           return props
