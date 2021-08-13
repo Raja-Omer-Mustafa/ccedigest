@@ -248,7 +248,34 @@
 
   </head>
   <body>
-<a class="btn btn-primary me-2" href="archives.html"  role="button">Back <i class="fas fa-download"></i></a>
+    <!-- ======= Header ======= -->
+    <header id="header">
+      <div
+        class="container-fluid d-flex justify-content-between align-items-center"
+      >
+        <h1 class="logo me-auto me-lg-0"><a href="index.html">cceDigest</a></h1>
+        <nav id="navbar" class="navbar order-last order-lg-0 ms-1 ">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="advertise-with-us.html">Advertise with us</a></li>
+            <li><a href="archives.html">Archives</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
+
+        <div class="header-social-links">
+          <a href="https://twitter.com/CEconomicDigest" class="twitter">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="https://www.facebook.com/ccedigest" class="facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
 <!--flip book container-->
     <div class="flip-book" id="container"></div>
     <!--flip book end-->  
@@ -304,7 +331,7 @@
         '39': 'public/books/image/theKingIsBlack/39.jpg',
         '40': 'public/books/image/theKingIsBlack/40.jpg',
         '41':
-          '',
+          'https://drive.google.com/uc?export=view&id=1BW0gUspYPfbrn6Yw7nWWKIQ3xWpLze4V',
         '42':
           'https://drive.google.com/uc?export=view&id=1ic8uhuzLkDzVHjq-mdDojh0VqCQeecjI',
       }
