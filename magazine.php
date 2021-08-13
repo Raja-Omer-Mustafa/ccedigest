@@ -248,6 +248,7 @@
 
   </head>
   <body>
+<a class="btn btn-primary me-2" href="index.html"  role="button">Home <i class="fas fa-download"></i></a>
 <!--flip book container-->
     <div class="flip-book" id="container"></div>
     <!--flip book end-->  
