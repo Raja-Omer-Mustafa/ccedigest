@@ -304,7 +304,7 @@
         '39': 'public/books/image/theKingIsBlack/39.jpg',
         '40': 'public/books/image/theKingIsBlack/40.jpg',
         '41':
-          'https://drive.google.com/uc?export=view&id=1BW0gUspYPfbrn6Yw7nWWKIQ3xWpLze4V',
+          '',
         '42':
           'https://drive.google.com/uc?export=view&id=1ic8uhuzLkDzVHjq-mdDojh0VqCQeecjI',
       }
