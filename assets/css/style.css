@@ -1326,17 +1326,13 @@ section {
         margin: 2px;
     padding: 2px;
       }
-.thumbnailDigests
+#main .container
 {
   background: #e9e8e6;
-  margin: 10px;
-  padding: 10px;
-  margin-left: 100px;
-  text-align: center;
 }
-.thumbnailDigests .row
+ #main .container .row div
 {
-  margin: 20px;
-  padding: 10px
-
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 10px;
 }
