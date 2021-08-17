@@ -68,7 +68,7 @@
     <main id="main">
       <!-- ======= Contact Section ======= -->
       <section id="contact" class="contact">
-        <div class="container" data-aos="fade-up">
+        <div class="container" >  <!--data-aos="fade-up"-->
           <div class="section-title">
             <h2>Head Office</h2>
             <pre>
@@ -98,30 +98,26 @@ Sector I-8/1, Islamabad, Pakistan</pre
               <h1>Editor</h1>
             </div>
             <div class="col-lg-8 mt-5 mt-lg-0">
-              <form
-                action="forms/contact.php"
-                method="post"
-                role="form"
-                class="php-email-form"
-              >
+           <form role="form" id='myForm' class="php-email-form">
+           <h4 class="Editor-Sent-notification text-center"></h4>
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <input
                       type="text"
-                      name="name"
+                      name="editorName"
                       class="form-control"
-                      id="name"
+                      id="editorName"
                       placeholder="Your Name"
                       required
                     />
                   </div>
-                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <div class="col-md-6 form-group ">  <!--mt-3 mt-md-0-->
                     <input
                       type="email"
                       class="form-control"
-                      name="email"
-                      id="email"
-                      placeholder="Your Email"
+                      name="editorEmail"
+                      id="editorEmail"
+                      placeholder="Enter Your Email"
                       required
                     />
                   </div>
@@ -130,30 +126,17 @@ Sector I-8/1, Islamabad, Pakistan</pre
                   <input
                     type="text"
                     class="form-control"
-                    name="subject"
-                    id="subject"
+                    name="editorSubject"
+                    id="editorSubject"
                     placeholder="Subject"
                     required
                   />
                 </div>
                 <div class="form-group mt-3">
-                  <textarea
-                    class="form-control"
-                    name="message"
-                    rows="5"
-                    placeholder="Message"
-                    required
-                  ></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">
-                    Your message has been sent. Thank you!
-                  </div>
+                             <textarea id="editorBody" rows="5" class="form-control" name="editorMessage" placeholder="Message"></textarea>
                 </div>
                 <div class="text-center">
-                  <button type="submit">Send Message</button>
+                   	<button type="submit" onclick="editorContact()" value="Send An Email">Submit</button>
                 </div>
               </form>
               <hr />
@@ -162,30 +145,26 @@ Sector I-8/1, Islamabad, Pakistan</pre
               <h1>Sales & Marketing</h1>
             </div>
             <div class="col-lg-8 mt-5 mt-lg-0">
-              <form
-                action="forms/contact.php"
-                method="post"
-                role="form"
-                class="php-email-form"
-              >
+              <form role="form" id='myForm1' class="php-email-form">
+           <h4 class="Sales-Sent-notification text-center"></h4>
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <input
                       type="text"
-                      name="name"
+                      name="SalesName"
                       class="form-control"
-                      id="name"
+                      id="SalesName"
                       placeholder="Your Name"
                       required
                     />
                   </div>
-                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <div class="col-md-6 form-group ">  <!--mt-3 mt-md-0-->
                     <input
                       type="email"
                       class="form-control"
-                      name="email"
-                      id="email"
-                      placeholder="Your Email"
+                      name="SalesEmail"
+                      id="SalesEmail"
+                      placeholder="Enter Your Email"
                       required
                     />
                   </div>
@@ -194,62 +173,46 @@ Sector I-8/1, Islamabad, Pakistan</pre
                   <input
                     type="text"
                     class="form-control"
-                    name="subject"
-                    id="subject"
+                    name="SalesSubject"
+                    id="SalesSubject"
                     placeholder="Subject"
                     required
                   />
                 </div>
                 <div class="form-group mt-3">
-                  <textarea
-                    class="form-control"
-                    name="message"
-                    rows="5"
-                    placeholder="Message"
-                    required
-                  ></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">
-                    Your message has been sent. Thank you!
-                  </div>
+                             <textarea id="SalesBody" rows="5" class="form-control" name="message" placeholder="Message"></textarea>
                 </div>
                 <div class="text-center">
-                  <button type="submit">Send Message</button>
+                   	<button type="submit" onclick="salesAndMarketingContact()" value="Send An Email">Submit</button>
                 </div>
               </form>
               <hr />
             </div>
+
             <div class="col-lg-4">
               <h1>Web Master</h1>
             </div>
             <div class="col-lg-8 mt-5 mt-lg-0">
-              <form
-                action="forms/contact.php"
-                method="post"
-                role="form"
-                class="php-email-form"
-              >
+             <form role="form" id='myForm2' class="php-email-form">
+           <h4 class="Web-Sent-notification text-center"></h4>
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <input
                       type="text"
-                      name="name"
+                      name="WebName"
                       class="form-control"
-                      id="name"
+                      id="WebName"
                       placeholder="Your Name"
                       required
                     />
                   </div>
-                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <div class="col-md-6 form-group ">  <!--mt-3 mt-md-0-->
                     <input
                       type="email"
                       class="form-control"
-                      name="email"
-                      id="email"
-                      placeholder="Your Email"
+                      name="WebEmail"
+                      id="WebEmail"
+                      placeholder="Enter Your Email"
                       required
                     />
                   </div>
@@ -258,30 +221,17 @@ Sector I-8/1, Islamabad, Pakistan</pre
                   <input
                     type="text"
                     class="form-control"
-                    name="subject"
-                    id="subject"
+                    name="WebSubject"
+                    id="WebSubject"
                     placeholder="Subject"
                     required
                   />
                 </div>
                 <div class="form-group mt-3">
-                  <textarea
-                    class="form-control"
-                    name="message"
-                    rows="5"
-                    placeholder="Message"
-                    required
-                  ></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">
-                    Your message has been sent. Thank you!
-                  </div>
+                             <textarea id="WebBody" rows="5" class="form-control" name="message" placeholder="Message"></textarea>
                 </div>
                 <div class="text-center">
-                  <button type="submit">Send Message</button>
+                   	<button type="submit" onclick="webMasterContact()" value="Send An Email">Submit</button>
                 </div>
               </form>
             </div>
@@ -324,5 +274,121 @@ Sector I-8/1, Islamabad, Pakistan</pre
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+<!--EDITOR FORM SCRIPTS-->
+        	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+        function editorContact() {
+            var name = $("#editorName");
+            var email = $("#editorEmail");
+            var subject = $("#editorSubject");
+            var body = $("#editorBody");
+
+            if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
+                $.ajax({
+                   url: 'editorContact.php',
+                   method: 'POST',
+                   dataType: 'json',
+                   data: {
+                       name: name.val(),
+                       email: email.val(),
+                       subject: subject.val(),
+                       body: body.val()
+                   },success:function (response)
+                    {
+                        $('#myForm')[0].reset();
+                        $('.Editor-Sent-notification').text("Message Sent Successfully.");
+                   }
+                });
+            }
+        function isNotEmpty(caller) {
+            if (caller.val() == "") {
+                caller.css('border', '1px solid red');
+                return false;
+            } else
+                caller.css('border', '');
+
+            return true;
+        }
+      }
+    </script>
+
+<!--SalesAndMarketingScripts-->
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+        function salesAndMarketingContact() {
+            var name = $("#SalesName");
+            var email = $("#SalesEmail");
+            var subject = $("#SalesSubject");
+            var body = $("#SalesBody");
+
+            if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
+                $.ajax({
+                   url: 'salesAndMarketingContact.php',
+                   method: 'POST',
+                   dataType: 'json',
+                   data: {
+                       name: name.val(),
+                       email: email.val(),
+                       subject: subject.val(),
+                       body: body.val()
+                   },success: function (response)
+                    {
+                        $('#myForm1')[0].reset();
+                        $('.Sales-Sent-notification').text("Message Sent Successfully.");
+                   }
+                });
+            }
+        }
+
+        function isNotEmpty(caller) {
+            if (caller.val() == "") {
+                caller.css('border', '1px solid red');
+                return false;
+            } else
+                caller.css('border', '');
+
+            return true;
+        }
+    </script>
+    <!--webMasterContact Scripts-->
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+        function webMasterContact() {
+            var name = $("#WebName");
+            var email = $("#WebEmail");
+            var subject = $("#WebSubject");
+            var body = $("#WebBody");
+
+            if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
+                $.ajax({
+                   url: 'webMasterContact.php',
+                   method: 'POST',
+                   dataType: 'json',
+                   data: {
+                       name: name.val(),
+                       email: email.val(),
+                       subject: subject.val(),
+                       body: body.val()
+                   },success: function (response)
+                    {
+                        $('#myForm1')[0].reset();
+                        $('.Web-Sent-notification').text("Message Sent Successfully.");
+                   }
+                });
+            }
+        }
+
+        function isNotEmpty(caller) {
+            if (caller.val() == "") {
+                caller.css('border', '1px solid red');
+                return false;
+            } else
+                caller.css('border', '');
+
+            return true;
+        }
+    </script>
+
+
   </body>
 </html>
