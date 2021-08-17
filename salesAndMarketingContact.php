@@ -17,8 +17,8 @@
         $mail->isSMTP();
         $mail->Host = "mail.ccedigest.com.pk";
         $mail->SMTPAuth = true;
-        $mail->Username = "sales@ccedigest.com.pk"; //enter you email address
-        $mail->Password = 'YK*=BdXCkN[)'; //enter you email password
+        $mail->Username = "sales@ccedigest.com.pk";
+        $mail->Password = 'YK*=BdXCkN[)';
         $mail->Port = 465;
         $mail->SMTPSecure = "ssl";
         //Email Settings
