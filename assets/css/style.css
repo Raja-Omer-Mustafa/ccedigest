@@ -483,7 +483,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
-section {
+.section {
   padding: 60px 0;
 }
 
@@ -1326,9 +1326,15 @@ section {
         margin: 2px;
     padding: 2px;
       }
+      #main
+      {
+        margin: 20px;
+    padding: 20px;
+      }
 #main .container
 {
   background: #e9e8e6;
+  padding: 50px;
 }
  #main .container .row div
 {

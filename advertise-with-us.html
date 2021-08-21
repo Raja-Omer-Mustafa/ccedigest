@@ -22,13 +22,6 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Kelly - v4.3.0
-  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -61,39 +54,71 @@
 
   <main id="main">
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-
+    <section class="contact">
+      <div class="container" >  <!--data-aos="fade-up"-->
         <div class="section-title">
           <h2>Dear Valued Customers!</h2>
           <p>If you desire to place advertisement of your organization to be seen by millions of the readers of China Economic Digest across the world, every week please contact our Sales & Marketing Department through the email given below.</p>
         </div>
-         <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
+         <form role="form" id='myForm' class="php-email-form">
+           <h4 class="sent-notification text-center"></h4>
+              <div class="row m-2">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  			<input id="name" name="name" class="form-control " type="text" placeholder="Enter Your Name" required>
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                <div class="col-md-6 form-group ">
+                  			<input id="email" type="email" class="form-control" name="email" placeholder="Enter Your Email" required>
                 </div>
               </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              <div class="form-group m-3 ">
+                <input id="subject" type="text" class="form-control" name="subject" placeholder="Subject" required> 
               </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              <div class="form-group m-3">
+                <textarea id="body" rows="5" class="form-control" name="message" placeholder="Message"></textarea>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+              <div class="text-center m-3">
+              	<button type="submit" onclick="sendEmail()" value="Send An Email">Submit</button> 
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
+         </div>
     </section><!-- End About Section -->
+    	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+        function sendEmail() {
+            var name = $("#name");
+            var email = $("#email");
+            var subject = $("#subject");
+            var body = $("#body");
+
+            if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
+                $.ajax({
+                   url: 'sendEmail.php',
+                   method: 'POST',
+                   dataType: 'json',
+                   data: {
+                       name: name.val(),
+                       email: email.val(),
+                       subject: subject.val(),
+                       body: body.val()
+                   },success: function (response)
+                    {
+                        $('#myForm')[0].reset();
+                        $('.sent-notification').text("Message Sent Successfully.");
+                   }
+                });
+            }
+        }
+
+        function isNotEmpty(caller) {
+            if (caller.val() == "") {
+                caller.css('border', '1px solid red');
+                return false;
+            } else
+                caller.css('border', '');
+
+            return true;
+        }
+    </script>
 
   </main><!-- End #main -->
 
