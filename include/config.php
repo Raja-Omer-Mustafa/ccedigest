@@ -1,3 +1,3 @@
 <?php
-    $baseurl = "https://temp.ccedigest.com.pk/public/Magazines/";
+    $baseurl = "https://ccedigest.com.pk/public/Magazines/";
 ?>
