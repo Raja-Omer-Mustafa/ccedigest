@@ -33,6 +33,7 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
    </head>
 
   <body>
@@ -275,7 +276,6 @@ Sector I-8/1, Islamabad, Pakistan</pre
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 <!--EDITOR FORM SCRIPTS-->
-        	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript">
         function editorContact() {
             var name = $("#editorName");
@@ -313,7 +313,6 @@ Sector I-8/1, Islamabad, Pakistan</pre
     </script>
 
 <!--SalesAndMarketingScripts-->
-	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript">
         function salesAndMarketingContact() {
             var name = $("#SalesName");
@@ -351,7 +350,6 @@ Sector I-8/1, Islamabad, Pakistan</pre
         }
     </script>
     <!--webMasterContact Scripts-->
-	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript">
         function webMasterContact() {
             var name = $("#WebName");
@@ -371,13 +369,12 @@ Sector I-8/1, Islamabad, Pakistan</pre
                        body: body.val()
                    },success: function (response)
                     {
-                        $('#myForm1')[0].reset();
+                        $('#myForm2')[0].reset();
                         $('.Web-Sent-notification').text("Message Sent Successfully.");
                    }
                 });
             }
         }
-
         function isNotEmpty(caller) {
             if (caller.val() == "") {
                 caller.css('border', '1px solid red');

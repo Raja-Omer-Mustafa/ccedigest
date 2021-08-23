@@ -1,209 +1,209 @@
 <?php
-  require 'include/config.php';
-  $id = $_GET["id"];
-  $magazines = [
+require 'include/config.php';
+$id = $_GET['id'];
+$magazines = [
     '1' => [
-      'name' => '01-Feb-2015',
-      'pages' => '99'
+        'name' => '01-Feb-2015',
+        'pages' => '99',
     ],
     '2' => [
-      'name' => '01-March-2015',
-      'pages' => '119'
+        'name' => '01-March-2015',
+        'pages' => '119',
     ],
     '3' => [
-      'name' => '03-Aug-2014',
-      'pages' => '120'
+        'name' => '03-Aug-2014',
+        'pages' => '120',
     ],
     '4' => [
-      'name' => '03-May-2015',
-      'pages' => '119'
+        'name' => '03-May-2015',
+        'pages' => '119',
     ],
     '5' => [
-      'name' => '04-Jan-2015',
-      'pages' => '150'
+        'name' => '04-Jan-2015',
+        'pages' => '150',
     ],
     '6' => [
-      'name' => '04-May-2014',
-      'pages' => '130'
+        'name' => '04-May-2014',
+        'pages' => '130',
     ],
     '7' => [
-      'name' => '05-April-2015',
-      'pages' => '150'
+        'name' => '05-April-2015',
+        'pages' => '150',
     ],
     '8' => [
-      'name' => '05-Oct-2014',
-      'pages' => '150'
+        'name' => '05-Oct-2014',
+        'pages' => '150',
     ],
     '9' => [
-      'name' => '06-April-2014',
-      'pages' => '106'
+        'name' => '06-April-2014',
+        'pages' => '106',
     ],
     '10' => [
-      'name' => '07-Sept-2014',
-      'pages' => '149'
+        'name' => '07-Sept-2014',
+        'pages' => '149',
     ],
     '11' => [
-      'name' => '08-Feb-2015',
-      'pages' => '130'
+        'name' => '08-Feb-2015',
+        'pages' => '130',
     ],
     '12' => [
-      'name' => '08-March-2015',
-      'pages' => '120'
+        'name' => '08-March-2015',
+        'pages' => '120',
     ],
     '13' => [
-      'name' => '09-Nov-2014',
-      'pages' => '150'
+        'name' => '09-Nov-2014',
+        'pages' => '150',
     ],
     '14' => [
-      'name' => '10-Aug-2014',
-      'pages' => '150'
+        'name' => '10-Aug-2014',
+        'pages' => '150',
     ],
     '15' => [
-      'name' => '11-Jan-2015',
-      'pages' => '150'
+        'name' => '11-Jan-2015',
+        'pages' => '150',
     ],
     '16' => [
-      'name' => '11-May-2014',
-      'pages' => '130'
+        'name' => '11-May-2014',
+        'pages' => '130',
     ],
     '17' => [
-      'name' => '12-April-2015',
-      'pages' => '150'
+        'name' => '12-April-2015',
+        'pages' => '150',
     ],
     '18' => [
-      'name' => '12-Oct-2014',
-      'pages' => '150'
+        'name' => '12-Oct-2014',
+        'pages' => '150',
     ],
     '19' => [
-      'name' => '13april2014',
-      'pages' => '120'
+        'name' => '13april2014',
+        'pages' => '120',
     ],
     '20' => [
-      'name' => '14-Dec-2014',
-      'pages' => '150'
+        'name' => '14-Dec-2014',
+        'pages' => '150',
     ],
     '21' => [
-      'name' => '14-Sept-2014',
-      'pages' => '150'
+        'name' => '14-Sept-2014',
+        'pages' => '150',
     ],
     '22' => [
-      'name' => '15-Feb-2015',
-      'pages' => '120'
+        'name' => '15-Feb-2015',
+        'pages' => '120',
     ],
     '23' => [
-      'name' => '15-March-2015',
-      'pages' => '120'
+        'name' => '15-March-2015',
+        'pages' => '120',
     ],
     '24' => [
-      'name' => '16feb2014',
-      'pages' => '110'
+        'name' => '16feb2014',
+        'pages' => '110',
     ],
     '25' => [
-      'name' => '16-Nov-2014',
-      'pages' => '150'
+        'name' => '16-Nov-2014',
+        'pages' => '150',
     ],
     '26' => [
-      'name' => '17-Aug-2014',
-      'pages' => '150'
+        'name' => '17-Aug-2014',
+        'pages' => '150',
     ],
     '27' => [
-      'name' => '18-Jan-2015',
-      'pages' => '150'
+        'name' => '18-Jan-2015',
+        'pages' => '150',
     ],
     '28' => [
-      'name' => '18-May-2014',
-      'pages' => '160'
+        'name' => '18-May-2014',
+        'pages' => '160',
     ],
     '29' => [
-      'name' => '19-April-2015',
-      'pages' => '120'
+        'name' => '19-April-2015',
+        'pages' => '120',
     ],
     '30' => [
-      'name' => '19Jan2014',
-      'pages' => '120'
+        'name' => '19Jan2014',
+        'pages' => '120',
     ],
     '31' => [
-      'name' => '19-Oct-2014',
-      'pages' => '120'
+        'name' => '19-Oct-2014',
+        'pages' => '120',
     ],
     '32' => [
-      'name' => '20april2014',
-      'pages' => '110'
+        'name' => '20april2014',
+        'pages' => '110',
     ],
     '33' => [
-      'name' => '21-Dec-2014',
-      'pages' => '150'
+        'name' => '21-Dec-2014',
+        'pages' => '150',
     ],
     '34' => [
-      'name' => '21-Sept-2014',
-      'pages' => '150'
+        'name' => '21-Sept-2014',
+        'pages' => '150',
     ],
     '35' => [
-      'name' => '22-Feb-2015',
-      'pages' => '120'
+        'name' => '22-Feb-2015',
+        'pages' => '120',
     ],
     '36' => [
-      'name' => '22-March-2015',
-      'pages' => '150'
+        'name' => '22-March-2015',
+        'pages' => '150',
     ],
     '37' => [
-      'name' => '23-Nov-2014',
-      'pages' => '150'
+        'name' => '23-Nov-2014',
+        'pages' => '150',
     ],
     '38' => [
-      'name' => '24-Aug-2014',
-      'pages' => '150'
+        'name' => '24-Aug-2014',
+        'pages' => '150',
     ],
     '39' => [
-      'name' => '25-Jan-2015',
-      'pages' => '150'
+        'name' => '25-Jan-2015',
+        'pages' => '150',
     ],
     '40' => [
-      'name' => '25-May-2014',
-      'pages' => '140'
+        'name' => '25-May-2014',
+        'pages' => '140',
     ],
     '41' => [
-      'name' => '26-April-2015',
-      'pages' => '150'
+        'name' => '26-April-2015',
+        'pages' => '150',
     ],
     '42' => [
-      'name' => '26jan2014',
-      'pages' => '102'
+        'name' => '26jan2014',
+        'pages' => '102',
     ],
     '43' => [
-      'name' => '26-Oct-2014',
-      'pages' => '150'
+        'name' => '26-Oct-2014',
+        'pages' => '150',
     ],
     '44' => [
-      'name' => '27april2014',
-      'pages' => '120'
+        'name' => '27april2014',
+        'pages' => '120',
     ],
     '45' => [
-      'name' => '28-Dec-2014',
-      'pages' => '150'
+        'name' => '28-Dec-2014',
+        'pages' => '150',
     ],
     '46' => [
-      'name' => '28-Sept-2014',
-      'pages' => '150'
+        'name' => '28-Sept-2014',
+        'pages' => '150',
     ],
     '47' => [
-      'name' => '29-March-2015',
-      'pages' => '150'
+        'name' => '29-March-2015',
+        'pages' => '150',
     ],
     '48' => [
-      'name' => '30-Nov-2014',
-      'pages' => '150'
+        'name' => '30-Nov-2014',
+        'pages' => '150',
     ],
     '49' => [
-      'name' => '31-Aug-2014',
-      'pages' => '150'
+        'name' => '31-Aug-2014',
+        'pages' => '150',
     ],
     '50' => [
-      'name' => 'Magazine June 15th - 21st, 2014',
-      'pages' => '150'
-    ]
-  ];
-  $magazine = $magazines[$id];
+        'name' => 'Magazine June 15th - 21st, 2014',
+        'pages' => '150',
+    ],
+];
+$magazine = $magazines[$id];
 ?>
 
 <!DOCTYPE html>
