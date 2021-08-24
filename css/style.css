@@ -91,8 +91,8 @@ body {
     padding: 10px 0 10px 28px;
 }
 
-.navbar a,
-.navbar a:focus {
+.navbar Link,
+.navbar Link:focus {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -105,8 +105,8 @@ body {
     position: relative;
 }
 
-.navbar a i,
-.navbar a:focus i {
+.navbar Link i,
+.navbar Link:focus i {
     font-size: 12px;
     line-height: 0;
     margin-left: 5px;
@@ -125,14 +125,14 @@ body {
     transition: all 0.3s ease-in-out 0s;
 }
 
-.navbar a:hover:before,
+.navbar Link:hover:before,
 .navbar li:hover>a:before,
 .navbar .active:before {
     visibility: visible;
     width: 25px;
 }
 
-.navbar a:hover,
+.navbar Link:hover,
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
@@ -264,13 +264,13 @@ body {
     transition: 0.3s;
 }
 
-.navbar-mobile a {
+.navbar-mobile Link {
     font-size: 15px;
     padding-right: 15px;
     color: #222222;
 }
 
-.navbar-mobile a:hover,
+.navbar-mobile Link:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
     color: #34b7a7;
