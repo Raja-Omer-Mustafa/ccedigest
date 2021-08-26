@@ -30,14 +30,14 @@
   <header id="header">
 
     <div class="container-fluid d-flex justify-content-between align-items-center">
-            <h1 class="logo me-auto me-lg-0"><a href="index.html">cceDigest</a></h1>
+            <h1 class="logo me-auto me-lg-0"><a href="index.php">cceDigest</a></h1>
       <nav id="navbar" class="navbar order-last order-lg-0 ms-1">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="advertise-with-us.html">Advertise with us</a></li>
-          <li><a href="archives.html">Archives</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+         <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="advertise-with-us.php">Advertise with us</a></li>
+            <li><a href="archives.php">Archives</a></li>
+            <li><a href="contact.php">Contact</a></li>
+          </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
