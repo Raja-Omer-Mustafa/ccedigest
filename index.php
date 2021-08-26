@@ -1,8 +1,25 @@
+<?php
+require 'include/config.php';
+$id = 4;
+$magazines = [
+    '4' => [
+        'name' => '03-May-2015',
+        'pages' => '119',
+    ]
+];
+$magazine = $magazines[$id];
+?>
 <!DOCTYPE html>
 <html>
   <head>
     <title>Home</title>
     <meta charset="utf-8" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+  
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -19,37 +36,38 @@
       href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- swiper cdn -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+<!-- swiper cdn -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!--swiper cdn end -->
-  </head>
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!--swiper cdn end -->
+ </head>
   <body>
     <!-- ======= Header ======= -->
     <header id="header">
       <div
         class="container-fluid d-flex justify-content-between align-items-center"
       >
-        <h1 class="logo me-auto me-lg-0"><a href="index.html">cceDigest</a></h1>
+        <h1 class="logo me-auto me-lg-0"><a href="index.php">cceDigest</a></h1>
         <nav id="navbar" class="navbar order-last order-lg-0 ms-1">
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="advertise-with-us.html">Advertise with us</a></li>
-            <li><a href="archives.html">Archives</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="advertise-with-us.php">Advertise with us</a></li>
+            <li><a href="archives.php">Archives</a></li>
+            <li><a href="contact.php">Contact</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
         <!-- .navbar -->
-
         <div class="header-social-links">
           <a href="https://twitter.com/CEconomicDigest" class="twitter">
             <i class="bi bi-twitter"></i>
@@ -62,9 +80,8 @@
     </header>
     <!-- End Header -->
     <!--flip book container-->
-    <!-- <div class="flip-book" id="container"></div> -->
-  <div class="flip-book-container flip-book id="container" src="./assets/03-May-2015-compressed.pdf"></div>
-    <!--flip book end-->
+    <div class="flip-book" id="container"></div>
+    <!--flip book end-->  
     <h1><a class="eeditions" href="archives.html">Earlier editions</a></h1>
     <!--Slider Start-->
     <section class="slidersection">
@@ -320,8 +337,18 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
       </div>
-
-      <!-- Swiper JS -->
+    <!--footer start-->
+    <footer id="footer">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright
+          <strong><span>2021</span></strong>
+          . All Rights Reserved
+        </div>
+      </div>
+    </footer>
+    <!--footer end-->
+              <!-- Swiper JS -->
       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
       <!-- Initialize Swiper -->
@@ -340,24 +367,64 @@
       </script>
     </section>
     <!--Slider End-->
+        <div id="preloader"></div>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+    >
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
 
-    <!--footer start-->
-    <footer id="footer">
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright
-          <strong><span>2021</span></strong>
-          . All Rights Reserved
-        </div>
-      </div>
-    </footer>
-    <!--footer end-->
-    <script src="js/libs/jquery.min.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+        <script src="js/libs/jquery.min.js"></script>
     <script src="js/libs/html2canvas.min.js"></script>
     <script src="js/libs/three.min.js"></script>
     <script src="js/libs/pdf.min.js"></script>
 
     <script src="js/dist/3dflipbook.js"></script>
+    <script type="text/javascript">
+      var magazine = JSON.parse('<?= json_encode($magazine) ?>');
+      var baseurl = '<?= $baseurl ?>';
+      // Sample 1 {
+      function theKingIsBlackPageCallback(n) {
+        return {
+          type: 'image',
+          src: `${baseurl}${magazine.name}/${magazine.name} (${n + 1}).jpg`, // images[n + 1]
+          interactive: true,
+        }
+      }
+      $('#container').FlipBook({
+        pageCallback: theKingIsBlackPageCallback,
+        pages: magazine.pages,
+        propertiesCallback: function (props) {
+          props.cover.color = 0x000000
+          return props
+        },
+        template: {
+          html: 'templates/default-book-view.html',
+          styles: ['css/short-white-book-view.css'],
+          links: [
+            {
+              rel: 'stylesheet',
+              href: 'css/font-awesome.min.css',
+            },
+          ],
+          script: 'js/default-book-view.js',
+          sounds: {
+            startFlip: 'sounds/start-flip.mp3',
+            endFlip: 'sounds/end-flip.mp3',
+          },
+        },
+      })
+    </script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
