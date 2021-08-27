@@ -19,13 +19,11 @@ $magazine = $magazines[$id];
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
       rel="stylesheet"
     />
-  
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
       rel="stylesheet"
     />
-
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
     <link
@@ -356,7 +354,7 @@ $magazine = $magazines[$id];
         var swiper = new Swiper('.mySwiper', {
           cssMode: true,
           slidesPerView: 6,
-          spaceBetween: 30,
+          spaceBetween: 20,
           navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
