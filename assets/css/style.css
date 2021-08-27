@@ -1,13 +1,3 @@
-/**
-* Template Name: Kelly - v4.3.0
-* Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -37,9 +27,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
 #preloader {
   position: fixed;
   top: 0;
@@ -82,10 +69,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: rotate(360deg);
   }
 }
-
-/*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
 .back-to-top {
   position: fixed;
   visibility: hidden;
@@ -99,33 +82,25 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   transition: all 0.4s;
 }
-
 .back-to-top i {
   font-size: 24px;
   color: #fff;
   line-height: 0;
 }
-
 .back-to-top:hover {
   background: #49cbbb;
   color: #fff;
 }
-
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
 }
-
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
 #header {
   background: #e9e8e6;
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
   z-index: 997;
   padding: 15px 0;
 }
-
 #header .logo {
   font-size: 32px;
   margin: 0;
@@ -135,7 +110,6 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-
 #header .logo a {
   color: #222222;
 }
@@ -149,14 +123,9 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 28px;
   }
 }
-
-/*--------------------------------------------------------------
-# Header Social Links
---------------------------------------------------------------*/
 .header-social-links {
   padding-right: 15px;
 }
-
 .header-social-links a {
   color: #6f6f6f;
   padding-left: 6px;
@@ -165,21 +134,12 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
   font-size: 16px;
 }
-
 .header-social-links a:hover {
   color: #34b7a7;
 }
-
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/**
-* Desktop Navigation 
-*/
 .navbar {
   padding: 0;
 }
-
 .navbar ul {
   margin: 0;
   padding: 0;
@@ -187,12 +147,10 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none;
   align-items: center;
 }
-
 .navbar li {
   position: relative;
   padding: 10px 0 10px 28px;
 }
-
 .navbar a, .navbar a:focus {
   display: flex;
   align-items: center;
@@ -205,13 +163,11 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
   position: relative;
 }
-
 .navbar a i, .navbar a:focus i {
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
 }
-
 .navbar > ul > li > a:before {
   content: "";
   position: absolute;
@@ -224,16 +180,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
 }
-
 .navbar a:hover:before, .navbar li:hover > a:before, .navbar .active:before {
   visibility: visible;
   width: 25px;
 }
-
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
   color: #222222;
 }
-
 .navbar .dropdown ul {
   display: block;
   position: absolute;
@@ -249,27 +202,22 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
   border-radius: 4px;
 }
-
 .navbar .dropdown ul li {
   min-width: 200px;
   padding: 0;
 }
-
 .navbar .dropdown ul a {
   padding: 10px 20px;
   font-size: 15px;
   text-transform: none;
   font-weight: 600;
 }
-
 .navbar .dropdown ul a i {
   font-size: 12px;
 }
-
 .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
   color: #34b7a7;
 }
-
 .navbar .dropdown:hover > ul {
   opacity: 1;
   top: 100%;
@@ -297,10 +245,6 @@ h1, h2, h3, h4, h5, h6 {
     left: -100%;
   }
 }
-
-/**
-* Mobile Navigation 
-*/
 .mobile-nav-toggle {
   color: #222222;
   font-size: 28px;
@@ -309,7 +253,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
   transition: 0.5s;
 }
-
 .mobile-nav-toggle.bi-x {
   color: #fff;
 }
@@ -479,10 +422,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 24px;
   }
 }
-
-/*--------------------------------------------------------------
-# Sections General
---------------------------------------------------------------*/
 .section {
   padding: 60px 0;
 }

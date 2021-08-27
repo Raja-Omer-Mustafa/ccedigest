@@ -100,7 +100,7 @@ Sector I-8/1, Islamabad, Pakistan</pre
             </div>
             <div class="col-lg-8 mt-5 mt-lg-0">
            <form role="form" id='myForm' class="php-email-form">
-           <h4 class="Editor-Sent-notification text-center"></h4>
+           <h4 class="Editor-Sent-notification text-center alert-success" role='alert'></h4>
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <input
@@ -137,7 +137,7 @@ Sector I-8/1, Islamabad, Pakistan</pre
                              <textarea id="editorBody" rows="5" class="form-control" name="editorMessage" placeholder="Message"></textarea>
                 </div>
                 <div class="text-center">
-                   	<button type="submit" onclick="editorContact()" value="Send An Email">Submit</button>
+                   	<button type="submit" class="btn btn-primary "  onclick="editorContact()" value="Send An Email">Submit</button>
                 </div>
               </form>
               <hr />
@@ -147,7 +147,7 @@ Sector I-8/1, Islamabad, Pakistan</pre
             </div>
             <div class="col-lg-8 mt-5 mt-lg-0">
               <form role="form" id='myForm1' class="php-email-form">
-           <h4 class="Sales-Sent-notification text-center"></h4>
+           <h4 class="Sales-Sent-notification text-center alert-success" role='alert'></h4>                
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <input
@@ -184,7 +184,7 @@ Sector I-8/1, Islamabad, Pakistan</pre
                              <textarea id="SalesBody" rows="5" class="form-control" name="message" placeholder="Message"></textarea>
                 </div>
                 <div class="text-center">
-                   	<button type="submit" onclick="salesAndMarketingContact()" value="Send An Email">Submit</button>
+                   	<button type="submit" class="btn btn-primary" onclick="salesAndMarketingContact()" value="Send An Email">Submit</button>
                 </div>
               </form>
               <hr />
@@ -195,7 +195,7 @@ Sector I-8/1, Islamabad, Pakistan</pre
             </div>
             <div class="col-lg-8 mt-5 mt-lg-0">
              <form role="form" id='myForm2' class="php-email-form">
-           <h4 class="Web-Sent-notification text-center"></h4>
+           <h4 class="Web-Sent-notification text-center alert-success" role='alert'></h4>
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <input
@@ -232,7 +232,7 @@ Sector I-8/1, Islamabad, Pakistan</pre
                              <textarea id="WebBody" rows="5" class="form-control" name="message" placeholder="Message"></textarea>
                 </div>
                 <div class="text-center">
-                   	<button type="submit" onclick="webMasterContact()" value="Send An Email">Submit</button>
+                   	<button type="submit" class="btn btn-primary" onclick="webMasterContact()" value="Send An Email">Submit</button>
                 </div>
               </form>
             </div>
