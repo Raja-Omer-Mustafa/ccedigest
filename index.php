@@ -361,7 +361,10 @@ $magazine = $magazines[$id];
           },
           mousewheel: true,
           keyboard: true,
-        })
+          lazy: {
+    loadPrevNext: true,
+  }
+        });
       </script>
     </section>
     <!--Slider End-->
