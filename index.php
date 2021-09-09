@@ -4,8 +4,8 @@ $id = 4;
 $magazines = [
     '4' => [
         'name' => '03-May-2015',
-        'pages' => '119',
-    ]
+        'pages' => '40',
+    ],
 ];
 $magazine = $magazines[$id];
 ?>
@@ -19,13 +19,11 @@ $magazine = $magazines[$id];
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
       rel="stylesheet"
     />
-  
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
       rel="stylesheet"
     />
-
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
     <link
@@ -117,7 +115,7 @@ $magazine = $magazines[$id];
               <img src="assets/img/slider/6.jpg" alt="slider 6 slide " />
             </a>
           </div>
-          <div class="swiper-slide">
+          <!-- <div class="swiper-slide">
             <a href="magazine.php?id=7">
               <img src="assets/img/slider/7.jpg" alt="slider 7 slide " />
             </a>
@@ -331,7 +329,7 @@ $magazine = $magazines[$id];
             <a href="magazine.php?id=49">
               <img src="assets/img/slider/49.jpg" alt="slider 49 slide " />
             </a>
-          </div>
+          </div> -->
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
@@ -356,14 +354,17 @@ $magazine = $magazines[$id];
         var swiper = new Swiper('.mySwiper', {
           cssMode: true,
           slidesPerView: 6,
-          spaceBetween: 30,
+          spaceBetween: 20,
           navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           },
           mousewheel: true,
           keyboard: true,
-        })
+          lazy: {
+    loadPrevNext: true,
+  }
+        });
       </script>
     </section>
     <!--Slider End-->
@@ -391,7 +392,10 @@ $magazine = $magazines[$id];
 
     <script src="js/dist/3dflipbook.js"></script>
     <script type="text/javascript">
-      var magazine = JSON.parse('<?= json_encode($magazine) ?>');
+      var magazine = {
+        'name': '03-May-2015',
+        'pages': '40'
+      };//JSON.parse('<?= json_encode($magazine) ?>');
       var baseurl = '<?= $baseurl ?>';
       // Sample 1 {
       function theKingIsBlackPageCallback(n) {
