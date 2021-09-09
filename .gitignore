@@ -1,1 +1,3 @@
 /public/Magazines/*
+.htaccess
+error_log
